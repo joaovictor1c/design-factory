@@ -1,8 +1,8 @@
 package br.com.factory.monsterAbstractFactory.manyFactory.services.armor;
 
-public class ChainMail implements Armor{
+public class Helmet implements Armor{
     @Override
     public String defineArmor() {
-        return "ChainMail";
+        return "Helmet";
     }
 }

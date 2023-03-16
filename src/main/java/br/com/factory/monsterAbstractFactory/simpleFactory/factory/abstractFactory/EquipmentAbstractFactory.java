@@ -1,17 +1,13 @@
 package br.com.factory.monsterAbstractFactory.simpleFactory.factory.abstractFactory;
 
 import br.com.factory.monsterAbstractFactory.simpleFactory.services.armor.Armor;
-import br.com.factory.monsterAbstractFactory.simpleFactory.services.armor.ChainMail;
-import br.com.factory.monsterAbstractFactory.simpleFactory.services.armor.Leather;
+import br.com.factory.monsterAbstractFactory.simpleFactory.services.armor.Helmet;
+import br.com.factory.monsterAbstractFactory.simpleFactory.services.armor.Shield;
 import br.com.factory.monsterAbstractFactory.simpleFactory.services.weapon.Axe;
-import br.com.factory.monsterAbstractFactory.simpleFactory.services.weapon.Bow;
+import br.com.factory.monsterAbstractFactory.simpleFactory.services.weapon.Hammer;
 import br.com.factory.monsterAbstractFactory.simpleFactory.services.weapon.Weapon;
 
 public class EquipmentAbstractFactory implements AbstractEquipmentMonster {
-
-    private Armor armor;
-
-    private Weapon weapon;
 
     private final String weaponName;
 
@@ -24,10 +20,10 @@ public class EquipmentAbstractFactory implements AbstractEquipmentMonster {
 
     @Override
     public Armor getArmor() {
-        if (armorName.equals("ChainMail")) {
-            return new ChainMail();
+        if (armorName.equals("Helmet")) {
+            return new Helmet();
         }
-        return new Leather();
+        return new Shield();
     }
 
     @Override
@@ -35,6 +31,6 @@ public class EquipmentAbstractFactory implements AbstractEquipmentMonster {
         if (weaponName.equals("Axe")) {
             return new Axe();
         }
-        return new Bow();
+        return new Hammer();
     }
 }

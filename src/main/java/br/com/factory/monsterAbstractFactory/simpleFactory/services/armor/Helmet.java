@@ -1,8 +1,8 @@
 package br.com.factory.monsterAbstractFactory.simpleFactory.services.armor;
 
-public class Leather implements Armor {
+public class Helmet implements Armor {
     @Override
     public String defineArmor() {
-        return "Leather";
+        return "Helmet";
     }
 }
